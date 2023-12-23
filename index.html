@@ -4,45 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://eb25ball.github.io/Grab-Player-Viewer/">
-    <meta property="og:title" content="Grab Player Viewer">
-    <meta property="og:description" content="edit player from grab">
-    <meta property="og:image" content="https://eb25ball.github.io/Grab-Player-Viewer/thumbnail.png">
     <link rel="preload" type="text/css" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" />
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <title>Player Customiser</title>
-    <script type="module" src="player.js" defer></script>
-
     <style>
         body {
+            font-family: 'Roboto';
+            background-image: linear-gradient(#84c1f0, #e1f6ff, #84c1f0);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            overflow: hidden;
         }
 
         .player-model {
-            width: 100vw;
-            height: 100vh;
-            z-index: 2;
+            width: 400px;
+            height: 450px;
+            border-radius: 15%;
+            background: rgba(0, 0, 0, .1);
         }
 
-        #customizations {
-            display: none; /* Hide the customization panel */
-        }
-
-        #canvas {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
+        #cosmetics {
+            width: 100px;
+            height: 100px;
+            background: rgba(0, 0, 0, .1);
+            border-radius: 15%;
         }
     </style>
 </head>
 
-<body id="body1">
+<body>
     <canvas class="player-model"></canvas>
-    <canvas id="canvas"></canvas>
+    <div id="cosmetics"></div>
 </body>
 
 </html>
